@@ -10,6 +10,7 @@ func Validate(inn string) bool {
 	if len(inn) == 12 {
 		return validTinNumber(inn, 2, 1) && validTinNumber(inn, 1, 0)
 	} else {
+	    // test
 		return validTinNumber(inn, 1, 2)
 	}
 
