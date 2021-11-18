@@ -1,7 +1,7 @@
 # innValidator
 -  simple module for validation inn control number
 
-### Example of usage: 
+#### Example of usage: 
 ```go
 package main
 
@@ -12,7 +12,7 @@ import (
 
 func example()  {
 
-	inn := "234234234"
+	inn := "1111111111"
 
 	ok := innValidator.Validate(inn)
 	
