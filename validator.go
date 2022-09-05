@@ -29,14 +29,14 @@ func validTinNumber(inn string, offset, arrOffset int) bool {
 	}
 
 	checkArr := []uint8{3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8}
-	var sum uint8 = 0
+	var sum uint16 = 0
 	var length = len(inn)
 
 	for i := 0; i != (length - offset); i++ {
-		sum = sum + ((inn[i] - '0') * checkArr[i+arrOffset])
+		sum = sum + uint16((inn[i] - '0') * checkArr[i+arrOffset])
 
 	}
-	res := sum%11%10 == inn[length-offset]-'0'
+	res := uint8(sum%11%10) == inn[length-offset]-'0'
 
 	return res
 
